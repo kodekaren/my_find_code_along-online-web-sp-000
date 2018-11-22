@@ -4,7 +4,8 @@ def my_find(collection)
 array = []
 i = 0
 while i < collection.length
-  array<<yield(collection[i])
+  if yield(collection[i])
+    return collection[i]
 i = i + 1
 end
 end
